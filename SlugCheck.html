@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>SlugCheck | Free Skincare Ingredient Analyzer for Safe Slugging</title>
+    <meta name="description" content="Free skincare ingredient checker analyzes your products for safe slugging. Detects retinol, acids & actives that conflict with occlusive routines. Get instant barrier safety reports.">
+    <meta name="keywords" content="slugging skincare, ingredient checker, skincare analysis, retinol compatibility, skin barrier, occlusive ingredients, skincare routine">
+    <meta name="author" content="SlugCheck Intelligence">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://slugcheck.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slugcheck.com/">
+    <meta property="og:title" content="SlugCheck | Professional Skincare Ingredient Analyzer">
+    <meta property="og:description" content="Analyze your skincare ingredients for safe slugging. Check compatibility with retinol, acids & actives. Free instant analysis.">
+    <meta property="og:image" content="https://slugcheck.com/og-image.jpg">
+    <meta property="og:site_name" content="SlugCheck">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://slugcheck.com/">
+    <meta property="twitter:title" content="SlugCheck | Skincare Ingredient Safety Checker">
+    <meta property="twitter:description" content="Is your skincare routine safe for slugging? Check ingredients instantly for free.">
+    <meta property="twitter:image" content="https://slugcheck.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SlugCheck Intelligence",
+      "url": "https://slugcheck.com",
+      "logo": "https://slugcheck.com/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "saumitrob@gmail.com",
+        "contactType": "customer support"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SlugCheck",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Professional skincare ingredient auditing tool for safe slugging routines",
+      "url": "https://slugcheck.com",
+      "featureList": [
+        "Ingredient safety analysis",
+        "Retinol and acid detection",
+        "Skin type customization",
+        "Barrier safety scoring",
+        "Product recommendations"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      }
+    }
+    </script>
+    
+    <!-- Structured Data: FAQ Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is skin slugging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Skin slugging is a skincare technique where you apply an occlusive layer (like petroleum jelly) as the final step in your nighttime routine to seal in moisture and repair the skin barrier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use retinol with slugging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you should not use retinol with slugging. Applying an occlusive over retinol increases its penetration by up to 10x, which can cause severe irritation and chemical burns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is slugging good for oily skin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Slugging can be beneficial for oily skin when done correctly. Use a thin layer of non-comedogenic occlusive and focus on hydration first."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        :root {
+            --stone-50: #fafaf9;
+            --stone-100: #f5f5f4;
+            --stone-200: #e7e5e4;
+            --stone-300: #d6d3d1;
+            --stone-600: #57534e;
+            --stone-800: #292524;
+            --stone-900: #1c1917;
+            
+            --sage-50: #f4f7f4;
+            --sage-100: #e3ebe3;
+            --sage-200: #c5d8c5;
+            --sage-500: #5a7a5a;
+            --sage-600: #4a5d4e;
+            --sage-700: #3d4a40;
+            
+            --amber-50: #fffbeb;
+            --amber-100: #fef3c7;
+            --amber-600: #d97706;
+            
+            --emerald-50: #ecfdf5;
+            --emerald-100: #d1fae5;
+            --emerald-500: #10b981;
+            --emerald-600: #059669;
+            
+            --rose-50: #fff1f2;
+            --rose-100: #ffe4e6;
+            --rose-500: #f43f5e;
+            --rose-600: #e11d48;
+            
+            --bg-primary: var(--stone-50);
+            --bg-secondary: white;
+            --bg-tertiary: var(--stone-100);
+            --text-primary: var(--stone-900);
+            --text-secondary: var(--stone-600);
+            --text-muted: #78716c;
+            --accent-primary: var(--sage-600);
+            --accent-secondary: var(--sage-500);
+            --border-light: var(--stone-200);
+            --border-medium: var(--stone-300);
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: var(--stone-900);
+            --bg-secondary: #1c1917;
+            --bg-tertiary: #292524;
+            --text-primary: #fafaf9;
+            --text-secondary: #a8a29e;
+            --text-muted: #78716c;
+            --border-light: #292524;
+            --border-medium: #44403c;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: background-color var(--transition-base), color var(--transition-base);
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            color: var(--text-primary);
+        }
+
+        /* Disclaimer Bar */
+        .disclaimer {
+            background: var(--amber-50);
+            border-bottom: 1px solid var(--amber-100);
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--amber-600);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        [data-theme="dark"] .disclaimer {
+            background: rgba(217, 119, 6, 0.1);
+            border-color: rgba(217, 119, 6, 0.2);
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
+            transition: all var(--transition-base);
+        }
+
+        [data-theme="dark"] .nav {
+            background: rgba(28, 25, 23, 0.8);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .nav-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: width var(--transition-fast);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border-medium);
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all var(--transition-fast);
+            font-size: 1.25rem;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 6rem 1.5rem 4rem;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, var(--sage-200) 0%, transparent 70%);
+            opacity: 0.4;
+            z-index: -1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        [data-theme="dark"] .hero::before {
+            background: radial-gradient(circle, var(--sage-800) 0%, transparent 70%);
+            opacity: 0.2;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.4; }
+            50% { transform: translateX(-50%) scale(1.1); opacity: 0.2; }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.25rem, 5vw, 3.75rem);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            sm:flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--stone-800) 0%, var(--stone-900) 100%);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            box-shadow: var(--shadow-md);
+        }
+
+        [data-theme="dark"] .btn-primary {
+            background: linear-gradient(135deg, #f5f5f4 0%, #fafaf9 100%);
+            color: var(--stone-900);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-tertiary);
+        }
+
+        /* Trust Indicators */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .trust-badge svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--emerald-500);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (min-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr 380px;
+                align-items: start;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent-primary);
+            border-radius: 2px;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .toggle-group {
+            display: flex;
+            gap: 0.5rem;
+            background: var(--bg-tertiary);
+            padding: 0.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .toggle-btn {
+            flex: 1;
+            padding: 0.875rem 1rem;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: all var(--transition-fast);
+            position: relative;
+        }
+
+        .toggle-btn.active {
+            color: var(--accent-primary);
+            background: var(--bg-secondary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Skin Type Grid */
+        .skin-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+
+        .skin-option {
+            position: relative;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 0.75rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all var(--transition-fast);
+            background: var(--bg-secondary);
+        }
+
+        .skin-option:hover {
+            border-color: var(--border-medium);
+            transform: translateY(-2px);
+        }
+
+        .skin-option.selected {
+            border-color: var(--accent-primary);
+            background: var(--sage-50);
+            box-shadow: 0 0 0 3px rgba(90, 122, 90, 0.1);
+        }
+
+        [data-theme="dark"] .skin-option.selected {
+            background: rgba(74, 93, 78, 0.2);
+        }
+
+        .skin-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .skin-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Textarea */
+        .ingredient-input {
+            width: 100%;
+            min-height: 160px;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 0.75rem;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: all var(--transition-fast);
+        }
+
+        .ingredient-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(90, 122, 90, 0.1);
+        }
+
+        .ingredient-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Action Button */
+        .action-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--stone-800) 0%, var(--stone-900) 100%);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .action-btn {
+            background: linear-gradient(135deg, #f5f5f4 0%, #fafaf9 100%);
+            color: var(--stone-900);
+        }
+
+        .action-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .action-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .action-btn.loading {
+            color: transparent;
+        }
+
+        .action-btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top-color: currentColor;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Secondary Buttons */
+        .btn-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all var(--transition-base);
+        }
+
+        .btn-group.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            flex: 1;
+            padding: 0.75rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        /* Results Section */
+        .results-container {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-light);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-slow);
+            display: none;
+        }
+
+        .results-container.visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Safety Meter */
+        .meter-container {
+            margin-bottom: 1.5rem;
+        }
+
+        .meter-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .meter-track {
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 0;
+            border-radius: 9999px;
+            transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .meter-fill.danger {
+            background: linear-gradient(90deg, var(--rose-500), var(--rose-600));
+        }
+
+        .meter-fill.safe {
+            background: linear-gradient(90deg, var(--emerald-500), var(--emerald-600));
+        }
+
+        .meter-fill::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .alert-danger {
+            background: var(--rose-50);
+            border-color: var(--rose-500);
+            color: var(--rose-700);
+        }
+
+        [data-theme="dark"] .alert-danger {
+            background: rgba(225, 29, 72, 0.1);
+        }
+
+        .alert-safe {
+            background: var(--emerald-50);
+            border-color: var(--emerald-500);
+            color: var(--emerald-700);
+        }
+
+        [data-theme="dark"] .alert-safe {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .alert-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Step Guide */
+        .guide-section {
+            margin-bottom: 2rem;
+        }
+
+        .guide-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .step-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .step-card {
+            padding: 1rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 0.75rem;
+            cursor: pointer;
+            text-align: left;
+            transition: all var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-primary);
+            transform: scaleX(0);
+            transition: transform var(--transition-fast);
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-primary);
+        }
+
+        .step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-number {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .step-detail {
+            margin-top: 0.75rem;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border: 1px dashed var(--border-medium);
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .step-detail.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Recommendations */
+        .rec-section {
+            margin-top: 2rem;
+        }
+
+        .rec-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .rec-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .rec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 0.5rem;
+            transition: all var(--transition-fast);
+            animation: slideIn 0.5s ease-out backwards;
+        }
+
+        .rec-item:nth-child(1) { animation-delay: 0.1s; }
+        .rec-item:nth-child(2) { animation-delay: 0.2s; }
+        .rec-item:nth-child(3) { animation-delay: 0.3s; }
+
+        .rec-item:hover {
+            border-color: var(--accent-primary);
+            transform: translateX(4px);
+        }
+
+        .rec-name {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+        }
+
+        .rec-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-primary);
+            background: var(--sage-50);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+
+        [data-theme="dark"] .rec-tag {
+            background: rgba(74, 93, 78, 0.3);
+        }
+
+        /* Sidebar Cards */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .intel-item {
+            padding: 0.875rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .intel-item:last-child {
+            border-bottom: none;
+        }
+
+        .intel-term {
+            font-weight: 600;
+            color: var(--accent-primary);
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .intel-desc {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Request Section */
+        .request-section {
+            background: linear-gradient(135deg, var(--sage-50) 0%, var(--stone-50) 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 3rem;
+            border: 1px solid var(--border-light);
+        }
+
+        [data-theme="dark"] .request-section {
+            background: linear-gradient(135deg, rgba(74, 93, 78, 0.2) 0%, rgba(28, 25, 23, 0.5) 100%);
+        }
+
+        .request-section h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        .request-section > p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .request-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            font-family: inherit;
+            font-size: 0.875rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: border-color var(--transition-fast);
+        }
+
+        .request-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--bg-tertiary);
+            padding: 4rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-light);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all var(--transition-base);
+            box-shadow: var(--shadow-lg);
+            z-index: 50;
+            color: var(--text-primary);
+            font-size: 1.25rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-primary);
+            color: white;
+            border-color: var(--accent-primary);
+            transform: translateY(-4px);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--stone-800);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            box-shadow: var(--shadow-xl);
+            opacity: 0;
+            transition: all var(--transition-base);
+            z-index: 200;
+        }
+
+        [data-theme="dark"] .toast {
+            background: #f5f5f4;
+            color: var(--stone-900);
+        }
+
+        .toast.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Print Styles */
+        @media print {
+            .no-print, .nav, .disclaimer, .back-to-top, .theme-toggle, .mobile-menu-btn {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .card {
+                border: 1px solid #ccc !important;
+                box-shadow: none !important;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .results-container {
+                display: block !important;
+                opacity: 1 !important;
+            }
+        }
+
+        /* Focus Visible */
+        *:focus-visible {
+            outline: 2px solid var(--accent-primary);
+            outline-offset: 2px;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--sage-200);
+            color: var(--stone-900);
+        }
+
+        [data-theme="dark"] ::selection {
+            background: var(--sage-700);
+            color: var(--stone-50);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Medical Disclaimer -->
+    <div class="disclaimer no-print">
+        ⚠️ Educational Tool Only — Not Medical Advice
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav no-print">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <span>✨</span>
+                <span>SlugCheck</span>
+            </a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#scanner" class="nav-link">Scanner</a></li>
+                <li><a href="#library" class="nav-link">Library</a></li>
+                <li><a href="#request" class="nav-link">Audit</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Top -->
+    <button class="back-to-top no-print" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">↑</button>
+    
+    <!-- Toast -->
+    <div class="toast" id="toast">Action completed successfully</div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-badge">Professional Skincare Intelligence</div>
+        <h1>Analyze Your Skincare Ingredients for <span style="color: var(--accent-primary);">Safe Slugging</span></h1>
+        <p>Professional-grade tool checks for retinol, acids & actives that conflict with occlusive routines. Optimize your skin barrier health with clinical precision.</p>
+        
+        <div class="hero-buttons">
+            <a href="#scanner" class="btn-primary">
+                Start Analysis
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+            <a href="#library" class="btn-secondary">Learn More</a>
+        </div>
+
+        <div class="trust-badges">
+            <div class="trust-badge">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Free to Use</span>
+            </div>
+            <div class="trust-badge">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Privacy First</span>
+            </div>
+            <div class="trust-badge">
+                <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>Instant Results</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="main-grid">
+            <!-- Left Column -->
+            <div class="content-column">
+                <!-- Scanner Card -->
+                <section id="scanner" class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Skincare Ingredient Safety Scanner</h2>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.875rem;">Check product compatibility with your slugging routine</p>
+                    </div>
+
+                    <!-- Routine Selection -->
+                    <div class="form-group">
+                        <label class="form-label">Routine Type</label>
+                        <div class="toggle-group">
+                            <button class="toggle-btn active" onclick="setRoutine('pm')" id="pmBtn">
+                                <span>🌙 Night (Slugging)</span>
+                            </button>
+                            <button class="toggle-btn" onclick="setRoutine('am')" id="amBtn">
+                                <span>☀️ Day (Glow)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Skin Type -->
+                    <div class="form-group">
+                        <label class="form-label">Skin Type Profile</label>
+                        <div class="skin-grid">
+                            <div class="skin-option selected" onclick="setSkin('Dry')" id="Dry">
+                                <span class="skin-icon">💧</span>
+                                <span class="skin-label">Dry</span>
+                            </div>
+                            <div class="skin-option" onclick="setSkin('Oily')" id="Oily">
+                                <span class="skin-icon">✨</span>
+                                <span class="skin-label">Oily</span>
+                            </div>
+                            <div class="skin-option" onclick="setSkin('Sensitive')" id="Sensitive">
+                                <span class="skin-icon">🌸</span>
+                                <span class="skin-label">Sensitive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients Input -->
+                    <div class="form-group">
+                        <label class="form-label">Ingredients List</label>
+                        <textarea 
+                            class="ingredient-input" 
+                            id="ingredients" 
+                            placeholder="Paste your product ingredients here...&#10;&#10;Example:&#10;Water, Glycerin, Niacinamide, Petrolatum, Ceramide NP..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Action Button -->
+                    <button class="action-btn" id="mainActionBtn" onclick="runScan()">
+                        <span>Run Security Analysis</span>
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 4px;">
+                            <path d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+
+                    <!-- Secondary Buttons -->
+                    <div class="btn-group" id="secondaryButtons">
+                        <button class="btn-secondary" onclick="generatePDF()">Export PDF</button>
+                        <button class="btn-secondary" onclick="copyReport()">Copy Report</button>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="results-container" id="resultsContainer">
+                        <!-- Meter -->
+                        <div class="meter-container" id="meterContainer">
+                            <div class="meter-labels">
+                                <span>Barrier Risk</span>
+                                <span>Safety Score</span>
+                            </div>
+                            <div class="meter-track">
+                                <div class="meter-fill" id="meterFill"></div>
+                            </div>
+                        </div>
+
+                        <!-- Alert -->
+                        <div id="results"></div>
+
+                        <!-- Step Guide -->
+                        <div class="guide-section" id="visualGuide">
+                            <h3 class="guide-title">Recommended Protocol</h3>
+                            <div class="step-grid">
+                                <div class="step-card" onclick="showStepDetail(1)">
+                                    <div class="step-number">Step 1</div>
+                                    <div class="step-title" id="s1">Hydrate</div>
+                                </div>
+                                <div class="step-card" onclick="showStepDetail(2)">
+                                    <div class="step-number">Step 2</div>
+                                    <div class="step-title" id="s2">Moisturize</div>
+                                </div>
+                                <div class="step-card" onclick="showStepDetail(3)">
+                                    <div class="step-number">Step 3</div>
+                                    <div class="step-title" id="s3">Seal</div>
+                                </div>
+                            </div>
+                            <div class="step-detail" id="stepDetail"></div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="rec-section" id="recommendations">
+                            <h3 class="rec-title">Verified Formulations</h3>
+                            <ul class="rec-list" id="recList"></ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Request Section -->
+                <section id="request" class="request-section">
+                    <h2>Request Manual Audit</h2>
+                    <p>Submit products for expert review by our skincare administration team.</p>
+                    <input type="text" class="request-input" id="requestInput" placeholder="Enter product name or brand...">
+                    <button class="action-btn" onclick="submitRequest()" style="width: auto; padding: 1rem 2rem;">
+                        Submit Request
+                    </button>
+                </section>
+            </div>
+
+            <!-- Right Column (Sidebar) -->
+            <aside class="sidebar" id="library">
+                <!-- Glossary -->
+                <div class="info-card">
+                    <h3>📚 Clinical Glossary</h3>
+                    <div class="intel-item">
+                        <div class="intel-term">TEWL</div>
+                        <div class="intel-desc">Transepidermal Water Loss — the process where water evaporates through the epidermis.</div>
+                    </div>
+                    <div class="intel-item">
+                        <div class="intel-term">Humectant</div>
+                        <div class="intel-desc">Water-binding molecules (Glycerin, HA) that pull moisture into skin layers.</div>
+                    </div>
+                    <div class="intel-item">
+                        <div class="intel-term">Occlusive</div>
+                        <div class="intel-desc">Physical barrier (Petrolatum) preventing 99% of TEWL by sealing moisture.</div>
+                    </div>
+                </div>
+
+                <!-- Daytime -->
+                <div class="info-card">
+                    <h3>☀️ Daytime Variables</h3>
+                    <div class="intel-item">
+                        <div class="intel-term">EltaMD UV Clear SPF 46</div>
+                        <div class="intel-desc">Niacinamide + Zinc for calming active redness.</div>
+                    </div>
+                    <div class="intel-item">
+                        <div class="intel-term">Supergoop! Unseen Sunscreen</div>
+                        <div class="intel-desc">Oil-free, invisible SPF 40 primer.</div>
+                    </div>
+                </div>
+
+                <!-- Nighttime -->
+                <div class="info-card">
+                    <h3>🌙 Nighttime Variables</h3>
+                    <div class="intel-item">
+                        <div class="intel-term">CeraVe Moisturizing Cream</div>
+                        <div class="intel-desc">Essential ceramides for baseline barrier repair.</div>
+                    </div>
+                    <div class="intel-item">
+                        <div class="intel-term">Aquaphor Healing Ointment</div>
+                        <div class="intel-desc">The gold standard for sealing in moisture.</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="info-card">
+                <h3>🔒 Privacy & Data Sovereignty</h3>
+                <div class="intel-item">
+                    <div class="intel-term">Local Processing</div>
+                    <div class="intel-desc">All ingredient scanning and audit logic are performed locally on your device. Your data never leaves your browser.</div>
+                </div>
+                <div class="intel-item">
+                    <div class="intel-term">Zero Logs Policy</div>
+                    <div class="intel-desc">We maintain no records of user inputs or private skincare data.</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>📋 Terms of Service</h3>
+                <div class="intel-item">
+                    <div class="intel-term">Educational Use Only</div>
+                    <div class="intel-desc">This tool provides general ingredient information and is not a substitute for professional medical diagnosis or dermatological advice.</div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>✉️ Contact</h3>
+                <div class="intel-item">
+                    <div class="intel-term">Administration</div>
+                    <div class="intel-desc">For database inquiries or professional collaboration: <strong>saumitrob@gmail.com</strong></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="#scanner">Scanner</a></li>
+            <li><a href="#library">Library</a></li>
+            <li><a href="#request">Audit</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <p>&copy; 2026 SlugCheck Intelligence. Professional Auditing Platform.</p>
+    </footer>
+
+    <script>
+        // State Management
+        let currentMode = 'pm';
+        let currentSkin = 'Dry';
+        let auditStatus = 'safe';
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Initialize
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon();
+
+        // Theme Functions
+        function toggleTheme() {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            document.getElementById('themeIcon').textContent = currentTheme === 'light' ? '🌙' : '☀️';
+        }
+
+        // Mobile Menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Back to Top
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Routine Selection
+        function setRoutine(mode) {
+            currentMode = mode;
+            document.getElementById('pmBtn').classList.toggle('active', mode === 'pm');
+            document.getElementById('amBtn').classList.toggle('active', mode === 'am');
+        }
+
+        // Skin Type Selection
+        function setSkin(type) {
+            currentSkin = type;
+            document.querySelectorAll('.skin-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            document.getElementById(type).classList.add('selected');
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('visible');
+            setTimeout(() => {
+                toast.classList.remove('visible');
+            }, 3000);
+        }
+
+        // Request Submission
+        function submitRequest() {
+            const input = document.getElementById('requestInput');
+            if (input.value.trim()) {
+                showToast('Audit request submitted successfully');
+                input.value = '';
+            } else {
+                showToast('Please enter a product name');
+            }
+        }
+
+        // Scan Functionality
+        function runScan() {
+            const input = document.getElementById('ingredients').value.toLowerCase();
+            if (!input.trim()) {
+                showToast('Please enter ingredients to analyze');
+                return;
+            }
+
+            const btn = document.getElementById('mainActionBtn');
+            const secondaryBtns = document.getElementById('secondaryButtons');
+            
+            btn.classList.add('loading');
+            btn.disabled = true;
+
+            setTimeout(() => {
+                const hazards = ['retinol', 'acid', 'aha', 'bha', 'tretinoin', 'glycolic', 'salicylic', 'benzoyl', 'vitamin c', 'ascorbic'];
+                const foundHazards = hazards.filter(h => input.includes(h));
+                
+                const resultsContainer = document.getElementById('resultsContainer');
+                const meterFill = document.getElementById('meterFill');
+                const results = document.getElementById('results');
+                
+                // Show results
+                resultsContainer.classList.add('visible');
+                secondaryBtns.classList.add('visible');
+
+                if (currentMode === 'pm' && foundHazards.length > 0) {
+                    auditStatus = 'danger';
+                    meterFill.className = 'meter-fill danger';
+                    setTimeout(() => { meterFill.style.width = '25%'; }, 100);
+                    
+                    results.innerHTML = `
+                        <div class="alert alert-danger">
+                            <div class="alert-title">⚠️ High Hazard Detected</div>
+                            <div>Found active ingredients: <strong>${foundHazards.join(', ')}</strong>. Slugging over these increases penetration 10x, risking chemical burns.</div>
+                        </div>
+                    `;
+                    
+                    document.getElementById('s1').textContent = 'Cleanse';
+                    document.getElementById('s2').textContent = 'Soothe';
+                    document.getElementById('s3').textContent = 'Stop Slugging';
+                    
+                    renderRecs([
+                        {n: 'La Roche-Posay Cicaplast Baume B5+', t: 'Repair'},
+                        {n: 'Prequel Skin Utility Cleanser', t: 'Gentle'},
+                        {n: 'Avene Cicalfate+ Restorative Cream', t: 'Soothe'}
+                    ]);
+                } else {
+                    auditStatus = 'safe';
+                    meterFill.className = 'meter-fill safe';
+                    setTimeout(() => { meterFill.style.width = '95%'; }, 100);
+                    
+                    results.innerHTML = `
+                        <div class="alert alert-safe">
+                            <div class="alert-title">✅ Barrier Compatible</div>
+                            <div>No conflicting actives detected. Your routine is optimized for ${currentMode === 'pm' ? 'nighttime slugging' : 'daytime protection'}.</div>
+                        </div>
+                    `;
+                    
+                    if (currentMode === 'pm') {
+                        document.getElementById('s1').textContent = 'Hydrate';
+                        document.getElementById('s2').textContent = 'Moisturize';
+                        document.getElementById('s3').textContent = 'Seal';
+                        renderRecs([
+                            {n: 'Skinfix Barrier+ Triple Lipid', t: 'Repair'},
+                            {n: 'Prequel Skin Utility Ointment', t: 'Seal'},
+                            {n: 'CeraVe Moisturizing Cream', t: 'Base'}
+                        ]);
+                    } else {
+                        document.getElementById('s1').textContent = 'Cleanse';
+                        document.getElementById('s2').textContent = 'Defend';
+                        document.getElementById('s3').textContent = 'Protect';
+                        renderRecs([
+                            {n: 'EltaMD UV Clear SPF 46', t: 'Protect'},
+                            {n: 'SkinCeuticals C E Ferulic', t: 'Antioxidant'},
+                            {n: 'Dieux Deliverance Serum', t: 'Barrier'}
+                        ]);
+                    }
+                }
+
+                btn.classList.remove('loading');
+                btn.disabled = false;
+                
+                // Scroll to results
+                setTimeout(() => {
+                    resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }, 1200);
+        }
+
+        function renderRecs(items) {
+            const container = document.getElementById('recList');
+            container.innerHTML = items.map(i => `
+                <li class="rec-item">
+                    <span class="rec-name">${i.n}</span>
+                    <span class="rec-tag">${i.t}</span>
+                </li>
+            `).join('');
+        }
+
+        // Step Detail View
+        function showStepDetail(num) {
+            const detail = document.getElementById('stepDetail');
+            const content = {
+                safe: [
+                    "💧 STEP 1: HYDRATION\n\nApply low-molecular-weight humectants (Glycerin, HA, Panthenol) onto DAMP skin. Clinical reasoning: Humectants are moisture magnets. Applied to dry skin, they pull water from the dermis (reverse hydration). Damp application ensures surface water trapping.",
+                    "🧴 STEP 2: MOISTURIZE\n\nLayer a barrier-repair cream with physiological lipids (Ceramides:Cholesterol:Fatty Acids in 3:1:1 ratio). This fills structural gaps in the stratum corneum, reinforcing the lipid bilayer before occlusive sealing.",
+                    "🛡️ STEP 3: SEAL\n\nApply pea-sized amount of high-purity occlusive (USP Petrolatum). Creates semi-permeable membrane reducing TEWL by 99%. The 'greenhouse effect' increases penetration depth of previous layers."
+                ],
+                danger: [
+                    "🧼 STEP 1: CLEANSE\n\nSwitch to pH-balanced (5.5), non-foaming cleanser. Sulfates and high-pH washes strip compromised lipids. Goal: remove debris without disrupting the acid mantle.",
+                    "🌱 STEP 2: SOOTHE\n\nUse anti-inflammatory agents (Bisabolol, Centella, Madecassoside). These downregulate pro-inflammatory cytokines. Calm biological alarms before adding moisture.",
+                    "🚫 STEP 3: CEASE SLUGGING\n\nSTOP occlusive use immediately. Sealing over actives (Retinoids/Acids) increases potency 10x via forced penetration, causing chemical entrapment and potential burns."
+                ],
+                am: [
+                    "🧼 STEP 1: PREP\n\nGentle cleanse to remove nighttime occlusive residue. Remaining film interferes with antioxidant penetration and SPF adherence, causing patchy protection.",
+                    "✨ STEP 2: DEFEND\n\nApply L-Ascorbic Acid (15-20%) or alternative antioxidants (Ferulic, Vitamin E). Neutralize free radicals from UV/pollution, preventing collagen breakdown.",
+                    "☀️ STEP 3: PROTECT\n\nApply broad-spectrum SPF 30+ (zinc oxide preferred). UV radiation is the primary external barrier degrader. Daily protection preserves lipid bilayer integrity."
+                ]
+            };
+            
+            const key = currentMode === 'pm' ? (auditStatus === 'danger' ? 'danger' : 'safe') : 'am';
+            detail.textContent = content[key][num-1];
+            detail.classList.add('visible');
+        }
+
+        // Utility Functions
+        function generatePDF() {
+            window.print();
+        }
+
+        function copyReport() {
+            const results = document.getElementById('results').innerText;
+            const report = `SlugCheck Analysis Report\n\nMode: ${currentMode === 'pm' ? 'Night Routine' : 'Day Routine'}\nSkin Type: ${currentSkin}\nStatus: ${auditStatus === 'danger' ? 'HAZARD DETECTED' : 'BARRIER SAFE'}\n\n${results}`;
+            
+            navigator.clipboard.writeText(report).then(() => {
+                showToast('Report copied to clipboard');
+            });
+        }
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
